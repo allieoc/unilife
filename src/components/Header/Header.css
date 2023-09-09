@@ -1,0 +1,30 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: #00A2E1;
+    color: white;
+    padding: 10px 30px;
+}
+
+.logo-container, .buttons-container, .shortlist, .contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons-container{
+    width: 20%;
+}
+
+.shortlist p, .contact p{
+    padding-left: 8px;
+}
+
+.logo-container img{
+    padding-left: 10px;
+}
+
+
+
+
