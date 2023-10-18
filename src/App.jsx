@@ -5,6 +5,8 @@ import Homepage from './pages/Homepage/Homepage'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Slider from './components/Slider/Slider'
+import SeeAllCities from './pages/SeeAllCities/SeeAllCities'
+import CityDetails from './pages/CityDetails/CityDetails'
 
 function App() {
 
@@ -12,9 +14,10 @@ function App() {
     
       <BrowserRouter>
         <Header />
-        <Slider />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path={"/"} element={<Homepage />} />
+          <Route path={"/seeallcities"} element={<SeeAllCities />} />
+          <Route path={"/citydetails/:city_id"} element={<CityDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>

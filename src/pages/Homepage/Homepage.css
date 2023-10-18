@@ -1,3 +1,137 @@
-.homepage-container{
-    height: 100vh;
+h3{
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 500;
+}
+
+.slider-form{
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.compare-container{
+    display: grid;
+    grid-template: 1fr 4fr/repeat(3, 1fr);
+    grid-template-areas:
+    "title title title"
+    "search compare bills";
+    background-color: #F6FAFD;
+    border-radius: 24px;
+    margin: 80px;
+    padding: 30px;
+}
+
+.homepage-container h3{
+    font-size: 36px;
+}
+
+.homepage-container h4{
+    font-size: 28px;
+}
+
+.compare-container p, .search-compare-container p{
+    color: #383838;
+    font-size: 20px;
+}
+
+.compare-container{
+    margin: 100px 80px;
+}
+
+.compare-container h3{
+    grid-area: title;
+    margin-top: 0px;
+
+}
+
+.compare-container h4{
+    margin-top: 10px;
+   
+}
+
+.compare-container img{
+    width: 120px;
+}
+
+.compare-section{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.compare-section p{
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.search{
+    grid-area: search;
+}
+
+.compare{
+    grid-area: compare;
+}
+
+.bills{
+    grid-area: bills;
+}
+
+.search-compare-container{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-right: 160px;
+}
+
+.best-selection{
+    display: flex;
+    padding: 30px;
+    height: 50%;
+}
+
+.best-selection p{
+    margin: 30px 0px;
+}
+
+.best-selection img {
+    width: 64px;
+    margin-right: 24px;
+    align-self: flex-start;
+}
+
+
+.search-compare-img{
+    width: 50%;
+    margin-bottom: -6px;
+}
+
+.search-compare-btn, .see-all-btn{
+    border-radius: 12px;
+    background-color: #3A5295;
+    color: white;
+    font-weight: 600;
+    width: 300px;
+    border: none;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.see-all-btn{
+    text-decoration: none;
+}
+
+.cities-container{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+
 }

@@ -9,9 +9,42 @@
 
 .banner-text{
     position: absolute;
-    top: 100px;
+    top: 70px;
     left: 10%;
     right: 10%;
     text-align: center;
     color: white;
 }
+
+.banner-text h1{
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.banner-text p{
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 24px;
+    color: white;
+    line-height: 32px;
+}
+
+.cities{
+    border-radius: 12px;
+    border: 1px solid #CED3D8;
+    background: #FFF;
+    width: 60%;
+    height: 48px;
+    padding: 0 10px;
+}
+
+.find-homes-btn{
+    border-radius: 12px;
+    background: #3A5295;
+    color: white;
+    font-weight: 600;
+    width: 30%;
+    border: none;
+    font-size: 20px;
+}
+
