@@ -4,8 +4,13 @@ h3{
     font-weight: 500;
 }
 
+.homepage-container{
+    text-align: center;
+    position: relative;
+}
+
 .slider-form{
-    margin: auto;
+    margin: 50px auto 0px auto;
     background-color: white;
     padding: 30px;
     border-radius: 20px;
@@ -15,6 +20,8 @@ h3{
     display: flex;
     justify-content: space-evenly;
 }
+
+
 
 .compare-container{
     display: grid;
@@ -91,6 +98,7 @@ h3{
     margin-top: 100px;
     margin-left: 150px;
     margin-right: 160px;
+    text-align: left;
 }
 
 .best-selection{
@@ -128,10 +136,14 @@ h3{
 
 .see-all-btn{
     text-decoration: none;
+    margin-top: 50px;
 }
 
 .cities-container{
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-
+    justify-items: center;
 }
+
+
+

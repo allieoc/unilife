@@ -1,3 +1,10 @@
-.see-all-container{
-    height: 100vh;
+.city-names-container{
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(4, 1fr);
 }
+
+.see-all-title{
+    text-align: center;
+    margin-top: 20px;
+}
+

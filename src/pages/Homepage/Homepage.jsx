@@ -1,22 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Homepage.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Slider from '../../components/Slider/Slider'
+import CityCard from '../../components/CityCard/CityCard'
 
 function Homepage() {
+
+  const [cities, setCities] = useState([]);
+
+  const navigate = useNavigate();
 
   const scrollToTop = () => {
     scrollTo({top: 0, behavior: "smooth"})
   }
 
+  //https://unilife-server.herokuapp.com/cities
 
   //display cities when page loads
-  // useEffect(()=>{
-  //   axios.get()
-  //   .then((res) => console.log(res))
-  //   .catch((err) => console.log(err))
-  // })
+   useEffect(()=>{
+     axios.get('https://unilife-server.herokuapp.com/cities?limit=9')
+     .then((res) => setCities(res.data.response))
+     .catch((err) => console.log(err))
+   })
 
 
   return (
@@ -25,15 +31,23 @@ function Homepage() {
       <form className="slider-form">
             <select className="cities">
                 <option className="cities-dropdown" value="">Search by city</option>
+                {
+                  cities.map(city=>(
+                    <option value={city?.name} key={city?._id}>{city?.name}</option>
+                  ))
+                }
             </select>
             <button className="find-homes-btn">Find Homes</button>
         </form>
       <h3>Student accommodations in our top cities</h3>
       <div className="cities-container">
-        {/* CITIES GO HERE */}
-        
+        {
+          cities?.map((city) => {
+              return <CityCard key={city._id} name={city.name} count={city.property_count} imageURL={city.image_url} cityId={city._id}/>
+          })
+        }
       </div>
-      <Link to="/seeallcities" className="see-all-btn">See All Cities</Link>
+      <button onClick={() => navigate("/seeallcities")} className="see-all-btn">See All Cities</button>
       <div className="compare-container">
         <h3>Compare all inclusive student homes.</h3>
           <div className="compare-section search">
