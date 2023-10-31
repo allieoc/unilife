@@ -60,13 +60,13 @@ const [isOpen, setIsOpen] = useState(false)
                     <form>
                         <div className="modal-left">
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" placeholder="Enter your name" />
+                            <input required type="text" id="name" placeholder="Enter your name" />
                             <br />
                             <label htmlFor="number">Phone Number</label>
-                            <input type="number" id="number" placeholder="Enter your phone number"/>
+                            <input required type="number" id="number" placeholder="Enter your phone number"/>
                             <br />
                             <label htmlFor="are-you">Are you a...</label>
-                            <select>
+                            <select required>
                                 <option>Student</option>
                                 <option>Faculty Member</option>
                                 <option>Recent Graduate</option>
@@ -74,10 +74,10 @@ const [isOpen, setIsOpen] = useState(false)
                         </div>
                         <div className="modal-right">
                             <label htmlFor="email">Email</label>
-                            <input type="email" id="email" placeholder="Enter your email address" />
+                            <input required type="email" id="email" placeholder="Enter your email address" />
                             <br />
                             <label htmlFor="message">Message</label>
-                            <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+                            <textarea required id="message" rows="4" placeholder="Enter your message"></textarea>
                             <button className="submit" type="submit">Submit</button>
                         </div>
                     </form>

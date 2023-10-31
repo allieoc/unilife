@@ -7,18 +7,37 @@ import axios from 'axios';
 function Footer() {
 
     const [email, setEmail] = useState("");
-    const [signupSuccess, setSignupSuccess] = useState(false);
+    const [emailMessage, setEmailMessage] = useState({message: '', color: ''})
 
     const handleSignup = (e) => {
         e.preventDefault();
+        if(isValidEmail(email)){
+            postEmail()
+        } else {
+            setEmailMessage({message: "Email is invalid. Please enter another email address.", color: 'white'})
+        }
+        postEmail();
+    }
+
+    function isValidEmail(email) {
+        // Regular expression for validating an Email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    const postEmail = () => {
         axios.post('https://unilife-server.herokuapp.com/subscriptions', { email: email })
         .then((res)=>{ 
-            setEmail("");
-            setSignupSuccess(true);
+            setEmailMessage({message: 'Thank you for subscribing to our newsletter!', color: 'white'})
             console.log(res);      
         })
-        .catch(err=>console.log(err))
+        .catch(err=>{
+            setEmailMessage({message: 'Sorry, something went wrong. Please try again.', color: 'white'})
+            console.log(err)
+        })
     }
+    
+   
 
 
   return (
@@ -29,13 +48,16 @@ function Footer() {
                 <p>Curious about new offerings? Sign up for our weekly newsletter and stay informed.</p>
                 <form onSubmit={handleSignup} className="input-wrapper">
                     <input 
+                        id="email"
                         type="email" 
                         placeholder="Enter Email" 
                         name="email" 
                         value={email}
                         onChange={(e)=> setEmail(e.target.value)} 
                     />
+                    <label htmlFor="email" className="email-label" style={{color: emailMessage.color}}>{emailMessage.message}</label>
                  </form>
+                 
             </div>
             <div className="socialize">
                 <h2>Let's Socialize</h2>

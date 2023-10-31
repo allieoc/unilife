@@ -1,0 +1,113 @@
+.filter-category{
+    display: flex;
+    flex-direction: column;
+}
+
+.homes-filter{
+    margin: 50px auto 0px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.city-details-title{
+    font-size: 14px;
+    margin: 80px;
+}
+
+.properties-container{
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 40px;
+    margin: 0px 80px 80px 80px;
+}
+
+.property-card{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.property-img{
+    width: 100%;
+    border-radius: 24px 24px 0px 0px;
+}
+
+.property-primary-info{
+    background-color: #3A5295;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 24px;
+    margin-top: -5px;
+}
+
+.property-price{
+    width: 80%;
+}
+
+.property-price p{
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.property-primary-info h5{
+    font-size: 18px;
+}
+
+.bathtub-img{
+    margin-left: 24px;
+}
+
+.bed-img, .bathtub-img{
+    margin-right: 5px;
+    width: 1.5em;
+}
+
+.property-type{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+
+.property-type h6{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.property-address{
+    display: flex;
+    align-items: center;
+    padding: 0px 24px;
+    font-size: 12px;
+}
+
+.property-secondary-info{
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    padding-bottom: 24px;
+}
+
+.property-view{
+    border: 1px solid lightgrey;
+    border-radius: 0px 0px 24px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.view-home{
+    color: black;
+    font-size: 16px;
+}
+
+.home-img{
+    width: 2em;
+}

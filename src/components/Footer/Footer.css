@@ -72,3 +72,12 @@
     width: 30%;
 }
 
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label{
+    margin-top: 10px;
+}
+

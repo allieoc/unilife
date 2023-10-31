@@ -1,6 +1,12 @@
+.see-all-container{
+    height: 100vh;
+}
+
 .city-names-container{
     display: grid;
-    grid-template: repeat(6, 1fr) / repeat(4, 1fr);
+    grid-template: repeat(6, 60px) / repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px 40px;
 }
 
 .see-all-title{
@@ -8,3 +14,17 @@
     margin-top: 20px;
 }
 
+.city-names-container button{
+    border: 1px solid #CED3D8;
+    border-radius: 24px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+}
+
+.see-all-title{
+    margin-top: 50px;
+}

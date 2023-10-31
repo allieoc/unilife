@@ -8,6 +8,7 @@ import CityCard from '../../components/CityCard/CityCard'
 function Homepage() {
 
   const [cities, setCities] = useState([]);
+  const [allCities, setAllCities] = useState([]);
 
   const navigate = useNavigate();
 
@@ -24,6 +25,11 @@ function Homepage() {
      .catch((err) => console.log(err))
    })
 
+  useEffect(()=>{
+     axios.get('https://unilife-server.herokuapp.com/cities?limit=20')
+     .then((res) => setAllCities(res.data.response))
+     .catch((err) => console.log(err))
+  })
 
   return (
     <div className='homepage-container'>
@@ -32,7 +38,7 @@ function Homepage() {
             <select className="cities">
                 <option className="cities-dropdown" value="">Search by city</option>
                 {
-                  cities.map(city=>(
+                  allCities.map(city=>(
                     <option value={city?.name} key={city?._id}>{city?.name}</option>
                   ))
                 }

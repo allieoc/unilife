@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path={"/"} element={<Homepage />} />
           <Route path={"/seeallcities"} element={<SeeAllCities />} />
-          <Route path={"/citydetails/:city_id"} element={<CityDetails />} />
+          <Route path={"/citydetails/:cityId"} element={<CityDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -24,9 +24,7 @@ function SeeAllCities() {
         <div className="city-names-container">
           {
             cities.map((city)=>(
-              <div className="city-search-container">
-                <h3>{city?.name}</h3>  
-              </div>
+                <button key={city?._id}>{city?.name}</button>  
             ))
           }
         </div>
