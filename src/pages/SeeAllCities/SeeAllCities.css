@@ -17,12 +17,18 @@
 .city-names-container button{
     border: 1px solid #CED3D8;
     border-radius: 24px;
-    padding: 20px 0px;
+    width: 100%;
+    padding: 30px;
+    color: black;
+    font-weight: 600;
+    
+}
+
+.city-names-card{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
-    font-weight: 600;
+    margin: 30px 0px;
 }
 
 .see-all-title{

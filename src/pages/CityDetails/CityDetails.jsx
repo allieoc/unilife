@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 function CityDetails() {
   const [cityProperties, setCityProperties] = useState([]);
   const [selectedCity, setSelectedCity] = useState([]);
-  const{cityId} = useParams();
+  const {cityId} = useParams();
 
   useEffect(()=>{
       axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
